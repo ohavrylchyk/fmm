@@ -286,7 +286,7 @@ void FastMapMatch::update_tg(
     update_layer(i, &(layers[i]), &(layers[i + 1]),
                  eu_dists[i], reverse_tolerance, &connected);
     if (!connected){
-      SPDLOG_INFO("Traj {} unmatched as point {} and {} not connected",
+      SPDLOG_DEBUG("Traj {} unmatched as point {} and {} not connected",
         traj.id, i, i+1);
       tg->print_optimal_info();
       break;
